@@ -32,9 +32,7 @@ export async function POST(req:NextRequest) {
                 status: 403
             })
         }
-
         const passwordMatch = await bcrypt.compare(password, user.password);
-
         if(passwordMatch){
             if(!JWT_SECRET){
                 console.error("JWT secret is not configured");
@@ -44,17 +42,13 @@ export async function POST(req:NextRequest) {
                     status: 500
                 })
             }
-
             const token = jwt.sign({
                 userId: user.id.toString()
             }, JWT_SECRET, {
                 expiresIn: '1h'
             });
-
             const response = NextResponse.json({msg: "User logged in successfully"});
-
             response.cookies.set("token", token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', maxAge: 60 * 60, sameSite: 'lax', path: "/" });
-            
             return response;
         }else{
             return NextResponse.json({
