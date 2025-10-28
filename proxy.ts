@@ -6,7 +6,7 @@ interface UserTokenPayload{
     userId: string;
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const token = request.cookies.get('token');
     const loginUrl = new URL('/signup', request.url);
 
