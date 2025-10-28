@@ -35,7 +35,7 @@ export async function POST(req:NextRequest) {
                 status: 400
             })
         }
-        await client.user.create({
+        const user = await client.user.create({
             data: {
                 username: username,
                 firstName: firstName,
@@ -43,8 +43,18 @@ export async function POST(req:NextRequest) {
                 password: hashedPassword
             }
         })
+        const userId = user.id;
+
+        // giving random balance to a user
+
+        const balance = await client.accounts.create({
+            data: {
+                balance: Math.floor(1 + Math.random() * 1000),
+                userId: userId
+            }
+        })
         return NextResponse.json({
-            msg: "Singup Completed Successfully!"
+            msg: "Signup Completed Successfully!"
         }, {
             status: 200
         })
