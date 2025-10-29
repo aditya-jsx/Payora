@@ -1,7 +1,13 @@
+"use client"
+
+import Hero from "./components/hero";
+import NavBar from "./components/navbar";
+
 export default function Home() {
   return (
     <>
-      <h1 className="text-6xl">Paytm</h1>
+      <NavBar />
+      <Hero />
     </>
   );
 }
