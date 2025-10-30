@@ -74,6 +74,7 @@ export default function Hero() {
                 <Image src={Hero_bottom2} className="hover:scale-102 transition duration-150 cursor-pointer rounded-xl" width={378} alt="Get UPI Statement in Excel/PDF" />
                 <Image src={Hero_bottom3} className="hover:scale-102 transition duration-150 cursor-pointer rounded-xl" width={378} alt="Get UPI Statement in Excel/PDF" />
             </div>
+            
         </div>
     </>
   )
