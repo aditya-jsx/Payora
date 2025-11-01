@@ -433,9 +433,11 @@ export default function Navbar() {
             </h1>
           </div>
 
-          <div className="flex h-full rounded-3xl bg-[#002970] items-center justify-between cursor-pointer px-1 py-1 gap-2">
-            <Image src={SignIn} className="w-8" alt="" />
-            <h1 className="text-white text-sm font-semibold pr-3">Sign In</h1>
+          <div className="rounded-3xl bg-[#002970] pr-2">
+            <Link href="/signup" className="flex items-center justify-between text-white text-sm font-semibold  px-1 py-1 gap-2">
+              <Image src={SignIn} className="w-8" alt="" />
+              Sign In
+            </Link>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import { useRef } from "react";
 import axios from "axios";
 // import { BASE_URL } from "@/app/lib/config";
 import { useRouter } from 'next/navigation'
+import Link from "next/link";
 
 export default function Signup() {
 
@@ -75,6 +76,10 @@ export default function Signup() {
                     className="bg-white text-lg font-semibold rounded-lg p-2 hover:cursor-pointer hover:bg-[#002970] hover:text-white border-1 hover:border-white transition duration-300"> 
                       SignUp
                     </button>
+                  </div>
+                  <div className="flex pt-16 gap-2">
+                    <Link href="/signin" className="text-blue-300 font-semibold">SignIn,</Link>
+                    <h1 className="text-white">if already has an account.</h1>
                   </div>
                 </div>
             </div>

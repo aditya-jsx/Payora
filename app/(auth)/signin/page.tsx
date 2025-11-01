@@ -56,7 +56,7 @@ export default function Signin() {
                           <button
                           onClick={signin} 
                           className="bg-white text-lg font-semibold rounded-lg p-2 hover:cursor-pointer hover:bg-[#002970] hover:text-white border-1 hover:border-white transition duration-300"> 
-                            SignUp
+                            SignIn
                           </button>
                         </div>
                       </div>
