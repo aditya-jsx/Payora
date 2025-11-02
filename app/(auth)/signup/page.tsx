@@ -51,7 +51,7 @@ export default function Signup() {
                   <h1 className="text-3xl font-semibold">SignUp</h1>
                 </div>
 
-                <div className="flex flex-col w-[60%] h-full bg-[#002970] rounded-r-2xl px-16 py-24 gap-2">
+                <div className="flex flex-col w-[60%] h-full bg-[#002970] rounded-r-2xl px-16 py-24 gap-2 border-b-2 border-r-2 border-t-2 border-white">
                   <div className="flex flex-col h-full">
                     <h1 className="text-white text-md  font-semibold">Username : -</h1>
                     <input ref={userNameRef} type="text" className="bg-white p-1 rounded-md" />
@@ -78,7 +78,7 @@ export default function Signup() {
                     </button>
                   </div>
                   <div className="flex pt-16 gap-2">
-                    <Link href="/signin" className="text-blue-300 font-semibold">SignIn,</Link>
+                    <Link href="/signin" className="text-white font-semibold hover:text-blue-300 transition duration-300">SignIn,</Link>
                     <h1 className="text-white">if already has an account.</h1>
                   </div>
                 </div>

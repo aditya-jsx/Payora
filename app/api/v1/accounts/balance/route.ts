@@ -37,7 +37,8 @@ export async function GET(request: NextRequest){
         }
         return NextResponse.json({
             msg: "Balance fetched successfully!",
-            balance: user.balance
+            balance: user.balance,
+            accountNumber: user.id
         }, {
             status: 200
         })
