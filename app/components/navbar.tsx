@@ -436,7 +436,7 @@
             <div className="rounded-3xl bg-[#002970] pr-2">
               <Link href="/signup" className="flex items-center justify-between text-white text-sm font-semibold  px-1 py-1 gap-2">
                 <Image src={SignIn} className="w-8" alt="" />
-                Sign In
+                Sign Up
               </Link>
             </div>
           </div>
