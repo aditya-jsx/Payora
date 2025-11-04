@@ -5,13 +5,16 @@ import Close from "@/app/assests/close.svg";
 import axios from "axios";
 import Image from "next/image";
 import { useRef, useState, MouseEvent } from "react";
+// import { BASE_URL } from "../lib/config";
 
 interface PaymentModalProps {
   onClose: () => void;
 }
 
 export default function PaymentModal({ onClose }: PaymentModalProps) {
-  const BASE_URL = "http://localhost:3000";
+  // const BASE_URL = "http://localhost:3000";
+
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const toRef = useRef<HTMLInputElement>(null);
   const amountRef = useRef<HTMLInputElement>(null);

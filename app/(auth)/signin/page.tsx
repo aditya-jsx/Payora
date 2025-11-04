@@ -6,9 +6,12 @@ import { useRef } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import Link from "next/link";
+// import { BASE_URL } from "@/app/lib/config";
 
 export default function Signin() {
-  const BASE_URL = "http://localhost:3000";
+  // const BASE_URL = "http://localhost:3000";
+
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const router = useRouter();
 
