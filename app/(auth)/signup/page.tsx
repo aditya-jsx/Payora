@@ -44,46 +44,45 @@ export default function Signup() {
 
   return (
     <>
-        <div className="h-screen w-full flex items-center justify-center">
-            <div className="flex h-140 w-180 p-4 bg-[#002970] rounded-2xl">
-                <div className="flex flex-col items-center justify-center w-[40%] h-full bg-white rounded-l-2xl gap-10">
-                  <Image src={Logo} className="w-48" alt="" />
-                  <h1 className="text-3xl font-semibold">SignUp</h1>
-                </div>
+      <div className="min-h-screen w-full flex items-center justify-center p-4 bg-[#9a9fa59f]">
+        <div className="flex flex-col md:flex-row h-auto md:h-140 w-full max-w-4xl md:w-180 bg-[#002970] rounded-2xl shadow-lg overflow-hidden">
+          <div className="flex flex-col items-center justify-center w-full md:w-[40%] h-full bg-white p-6 md:rounded-l-2xl rounded-t-2xl md:rounded-tr-none gap-6 md:gap-10">
+            <Image src={Logo} className="w-48 md:w-48" alt="Payora Logo" />
+            {/* <h1 className="text-2xl md:text-3xl font-semibold">SignUp</h1> */}
+          </div>
 
-                <div className="flex flex-col w-[60%] h-full bg-[#002970] rounded-r-2xl px-16 py-24 gap-2 border-b-2 border-r-2 border-t-2 border-white">
-                  <div className="flex flex-col h-full">
-                    <h1 className="text-white text-md  font-semibold">Username : -</h1>
-                    <input ref={userNameRef} type="text" className="bg-white p-1 rounded-md" />
-                  </div>
-                  <div className="flex flex-col h-full">
-                    <h1 className="text-white text-md  font-semibold">First name : -</h1>
-                    <input ref={firstNameRef} type="text" className="bg-white p-1 rounded-md" />
-
-                  </div>
-                  <div className="flex flex-col h-full">
-                    <h1 className="text-white text-md  font-semibold">Last name : -</h1>
-                    <input ref={lastNameRef} type="text" className="bg-white p-1 rounded-md" />
-
-                  </div>
-                  <div className="flex flex-col h-full">
-                    <h1 className="text-white text-md  font-semibold">Password : -</h1>
-                    <input ref={passwordRef} type="password" className="bg-white p-1 rounded-md" />
-                  </div>
-                  <div className="h-full pt-4">
-                    <button
-                    onClick={signup} 
-                    className="bg-white text-lg font-semibold rounded-lg p-2 hover:cursor-pointer hover:bg-[#002970] hover:text-white border-1 hover:border-white transition duration-300"> 
-                      SignUp
-                    </button>
-                  </div>
-                  <div className="flex pt-16 gap-2">
-                    <Link href="/signin" className="text-white font-semibold hover:text-blue-300 transition duration-300">SignIn,</Link>
-                    <h1 className="text-white">if already has an account.</h1>
-                  </div>
-                </div>
+          <div className="flex flex-col w-full md:w-[60%] h-full bg-[#002970] md:rounded-r-2xl rounded-b-2xl md:rounded-bl-none px-6 sm:px-10 md:px-16 py-10 md:py-16 lg:py-24 gap-3 md:border-b-2 md:border-r-2 md:border-t-2 border-white">
+            <div className="flex flex-col h-full">
+              <h1 className="text-white text-md  font-semibold">Username : -</h1>
+              <input ref={userNameRef} type="text" className="bg-white p-2 rounded-md w-full" />
             </div>
+            <div className="flex flex-col h-full">
+              <h1 className="text-white text-md  font-semibold">First name : -</h1>
+              <input ref={firstNameRef} type="text" className="bg-white p-2 rounded-md w-full" />
+            </div>
+            <div className="flex flex-col h-full">
+              <h1 className="text-white text-md  font-semibold">Last name : -</h1>
+              <input ref={lastNameRef} type="text" className="bg-white p-2 rounded-md w-full" />
+            </div>
+            <div className="flex flex-col h-full">
+              <h1 className="text-white text-md  font-semibold">Password : -</h1>
+              <input ref={passwordRef} type="password" className="bg-white p-2 rounded-md w-full" />
+            </div>
+            <div className="h-full pt-4">
+              <button
+                onClick={signup}
+                className="w-full sm:w-auto bg-white text-lg font-semibold rounded-lg px-4 py-2 hover:cursor-pointer hover:bg-[#002970] hover:text-white border-2 border-white transition duration-300"
+              >
+                SignUp
+              </button>
+            </div>
+            <div className="flex flex-col sm:flex-row pt-8 md:pt-16 gap-1 sm:gap-2">
+              <Link href="/signin" className="text-white font-semibold hover:text-blue-300 transition duration-300">SignIn,</Link>
+              <h1 className="text-white">if already has an account.</h1>
+            </div>
+          </div>
         </div>
+      </div>
     </>
   )
 }
