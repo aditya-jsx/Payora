@@ -4,13 +4,13 @@ import path from "path";
 const nextConfig: NextConfig = {
   output: 'standalone',
   
-  experimental: {
-    // outputFileTracingIncludes: {
-    //   '/*': [
-    //     path.resolve('./app/generated/prisma/libquery_engine-rhel-openssl-3.0.x.so.node')
-    //   ],
-    // },
-  },
+  // experimental: {
+  //   // outputFileTracingIncludes: {
+  //   //   '/*': [
+  //   //     path.resolve('./app/generated/prisma/libquery_engine-rhel-openssl-3.0.x.so.node')
+  //   //   ],
+  //   // },
+  // },
 
   async headers() {
     return [
