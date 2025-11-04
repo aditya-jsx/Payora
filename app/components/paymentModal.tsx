@@ -4,17 +4,21 @@ import Logo from "@/app/assests/logo.svg";
 import Close from "@/app/assests/close.svg";
 import axios from "axios";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, MouseEvent } from "react";
 
-export default function PaymentModal({ onClose }) {
+interface PaymentModalProps {
+  onClose: () => void;
+}
+
+export default function PaymentModal({ onClose }: PaymentModalProps) {
   const BASE_URL = "http://localhost:3000";
 
   const toRef = useRef<HTMLInputElement>(null);
   const amountRef = useRef<HTMLInputElement>(null);
 
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
-  const closeModal = (e) => {
+  const closeModal = (e: MouseEvent<HTMLDivElement>) => {
     if (modalRef.current === e.target) {
       onClose();
     }
