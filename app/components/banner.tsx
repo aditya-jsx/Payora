@@ -38,7 +38,7 @@ export default function Banner() {
           </div>
         </div>
         
-        <a href="https://paytm.com/care/customer-care" className="flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl lg:w-295 rounded-2xl lg:rounded-4xl bg-linear-to-b from-[#0085FE] to-[#00C6F0] px-5 py-6 sm:py-8.5 hover:scale-102 transition duration-300 cursor-pointer text-center sm:text-left">
+        <a href="https://paytm.com/care/customer-care" className="flex flex-col sm:flex-row justify-between items-center w-full max-w-6xl lg:w-295 rounded-2xl lg:rounded-4xl bg-linear-to-b from-[#0085FE] to-[#00C6F0] px-5 py-6 sm:py-3 hover:scale-102 transition duration-300 cursor-pointer text-center sm:text-left">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
             <div className="flex items-center justify-center bg-white w-11 h-11 rounded-full flex-shrink-0">
               <Image src={Paytm_upi} className="w-10" alt="Paytm UPI" />

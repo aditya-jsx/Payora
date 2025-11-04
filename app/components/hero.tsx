@@ -69,7 +69,7 @@ export default function Hero() {
           <Image src={Banner_2} className="h-16 w-full md:w-auto object-contain hover:scale-102 transition duration-150 cursor-pointer" alt="Broadband Recharge Banner" />
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-5 w-full max-w-6xl pb-8">
+        <div className="flex flex-col md:flex-row justify-center gap-5 w-full max-w-6xl pb-8 px-4">
           <Image src={Hero_bottom1} className="hover:scale-102 transition duration-150 cursor-pointer rounded-xl w-full md:w-1/3" alt="Swipe Left" />
           <Image src={Hero_bottom2} className="hover:scale-102 transition duration-150 cursor-pointer rounded-xl w-full md:w-1/3" alt="Expense Tracking" />
           <Image src={Hero_bottom3} className="hover:scale-102 transition duration-150 cursor-pointer rounded-xl w-full md:w-1/3" alt="Check Total Balance" />

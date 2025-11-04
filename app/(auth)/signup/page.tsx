@@ -76,7 +76,7 @@ export default function Signup() {
                 SignUp
               </button>
             </div>
-            <div className="flex flex-col sm:flex-row pt-8 md:pt-16 gap-1 sm:gap-2">
+            <div className="flex flex-col sm:flex-row pt-8 md:pt-8 gap-1 sm:gap-2">
               <Link href="/signin" className="text-white font-semibold hover:text-blue-300 transition duration-300">SignIn,</Link>
               <h1 className="text-white">if already has an account.</h1>
             </div>
