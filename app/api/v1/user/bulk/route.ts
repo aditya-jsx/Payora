@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import client from "@/app/lib/db";
-// import { User } from "@prisma/client";
+import { User } from "@/app/generated/prisma/client";
 
 export async function GET(request: NextRequest){
 
@@ -42,7 +42,7 @@ export async function GET(request: NextRequest){
             })
         }
         return NextResponse.json({
-            users: users.map((user: any) => ({
+            users: users.map((user: User) => ({
                 username: user.username,
                 firstName: user.firstName,
                 lastName: user.lastName,
