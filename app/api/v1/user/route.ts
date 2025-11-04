@@ -15,16 +15,18 @@ const requiredBody = z.object({
 })
 
 export async function PUT(request: NextRequest){
-    const userId = request.headers.get('user-id');
+    const user_Id = request.headers.get('user-id');
     const body = await request.json();
 
-    if(!userId){
+    if(!user_Id){
         return NextResponse.json({
             msg: "Not Authorized"
         }, {
             status: 401
         });
     }
+
+    const userId = parseInt(user_Id);
 
     const parsedResult  = requiredBody.safeParse(body);
 
