@@ -33,6 +33,10 @@ const config: runtime.GetPrismaClientConfig = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -55,8 +59,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client\"\n  output   = \"../app/generated/prisma\"\n  // binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id        Int        @id @unique @default(autoincrement())\n  username  String     @unique\n  firstName String\n  lastName  String\n  password  String\n  accounts  Accounts[]\n}\n\nmodel Accounts {\n  id      Int  @id @default(autoincrement())\n  balance Int\n  user    User @relation(fields: [userId], references: [id])\n  userId  Int  @unique\n}\n",
-  "inlineSchemaHash": "4bca24cf328ba69e943989d7a91c82bab382afb12780c50a6373315c2cdc6e82",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client\"\n  output        = \"../app/generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  id        Int        @id @unique @default(autoincrement())\n  username  String     @unique\n  firstName String\n  lastName  String\n  password  String\n  accounts  Accounts[]\n}\n\nmodel Accounts {\n  id      Int  @id @default(autoincrement())\n  balance Int\n  user    User @relation(fields: [userId], references: [id])\n  userId  Int  @unique\n}\n",
+  "inlineSchemaHash": "e1f80a5d1e0d9e49e934a948b747dd74bc1c2a319f8f921922e0bbd9db716de4",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},
