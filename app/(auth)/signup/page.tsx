@@ -4,15 +4,10 @@ import Image from "next/image";
 import Logo from "@/app/assests/logo.svg"
 import { useRef } from "react";
 import axios from "axios";
-// import { BASE_URL } from "@/app/lib/config";
 import { useRouter } from 'next/navigation'
 import Link from "next/link";
 
 export default function Signup() {
-
-  // const BASE_URL = "http://localhost:3000";
-
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
   const router = useRouter();
 
@@ -28,7 +23,7 @@ export default function Signup() {
     const password = passwordRef.current?.value;
 
     try{
-      await axios.post(`${BASE_URL}/api/v1/signup`, {
+      await axios.post(`/api/v1/signup`, {
         username,
         firstName,
         lastName,

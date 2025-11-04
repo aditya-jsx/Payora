@@ -6,15 +6,12 @@ import { useEffect, useState } from "react";
 import SBI_logo from "@/app/assests/sbi-logo.png";
 import upi from "@/app/assests/upi.svg";
 import Image from "next/image";
-// import { BASE_URL } from "../lib/config";
 
 import PaymentModal from "../components/paymentModal";
 import Recommended from "../components/recommended";
 import PaymentHistory from "../components/paymentHistory";
 
 export default function Dashboard() {
-  // const BASE_URL = "http://localhost:3000/";
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
   const [balance, setBalance] = useState<number | null>(null);
   const [account, getAccount] = useState<number | null>(null);
 
@@ -22,7 +19,7 @@ export default function Dashboard() {
 
   async function getAccountNumber() {
     try {
-      const response = await axios.get(`${BASE_URL}/api/v1/accounts/balance`, {
+      const response = await axios.get(`/api/v1/accounts/balance`, {
         withCredentials: true,
       });
       const accountNumber = response.data.accountNumber;
@@ -43,7 +40,7 @@ export default function Dashboard() {
 
   async function getBalance() {
     try {
-      const response = await axios.get(`${BASE_URL}/api/v1/accounts/balance`, {
+      const response = await axios.get(`/api/v1/accounts/balance`, {
         withCredentials: true,
       });
       const balance = response.data.balance;
