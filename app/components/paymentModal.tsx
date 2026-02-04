@@ -52,7 +52,7 @@ export default function PaymentModal({ onClose }: PaymentModalProps) {
           amountRef.current.value = "";
         }
         onClose();
-        window.location.reload();
+        // window.location.reload();
       }
 
     } catch (e) {
