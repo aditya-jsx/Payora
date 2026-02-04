@@ -52,7 +52,9 @@ export default function PaymentModal({ onClose }: PaymentModalProps) {
           amountRef.current.value = "";
         }
         onClose();
+        window.location.reload();
       }
+
     } catch (e) {
       if (axios.isAxiosError(e) && e.response) {
         alert(e.response.data.msg);
